@@ -1,0 +1,27 @@
+<html>
+
+<body>
+
+    <a class="topics" href="javascript:seek2(11 * 60 * 1000, -5000);">JumpTo 5 secs before timestamp at 11:00</a>
+
+    <iframe src="https://player.vimeo.com/video/4022128" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen
+        allowfullscreen></iframe>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script>
+    var iframe = document.querySelector('iframe');
+    var player = new Vimeo.Player(iframe);
+
+    function seek2(pos, offset) {
+        if (!isNaN(offset)) {
+            pos += offset;
+            if (pos < 0) {
+                pos = 0;
+            }
+        }
+        player.setCurrentTime(pos / 1000)
+    }
+</script>
+</body>
+
+</html>
