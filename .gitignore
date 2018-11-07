@@ -1,2 +1,5 @@
 *.iml
 .idea
+APIexamples-venv/
+*.mp3
+docs.html
